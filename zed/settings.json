@@ -32,6 +32,12 @@
     },
   },
   "terminal": {
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default",
+      },
+    },
     "font_size": 14.0,
     "shell": {
       "program": "fish",
@@ -89,9 +95,22 @@
     },
   },
   "languages": {
+    "Shell Script": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "shfmt",
+          // change '--indent 2' to match preffered indentation size
+          "arguments": ["--filename", "{buffer_path}", "--indent", "2"],
+        },
+      },
+      "tab_size": 2,
+      "hard_tabs": false,
+    },
     "Python": {
       "tab_size": 4,
       "formatter": "language_server",
+      "language_servers": ["basedpyright"],
       "format_on_save": "on",
     },
     "JavaScript": {
@@ -100,6 +119,15 @@
         "external": {
           "command": "prettier",
           "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+    },
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "diagnosticMode": "workspace",
         },
       },
     },
