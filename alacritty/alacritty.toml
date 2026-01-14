@@ -4,7 +4,7 @@ WINIT_X11_SCALE_FACTOR = "1"
 
 [terminal.shell]
 program = "/bin/bash"
-args = ["-c", "tmux attach || tmux new-session -A -s main"]
+args = ["-c", "tmux"]
 
 [window]
 dynamic_padding = true
