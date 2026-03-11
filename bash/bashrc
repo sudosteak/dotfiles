@@ -8,9 +8,9 @@
 PS1='[\u@\h \W]\$ '
 
 # Source all scripts in ~/.bash directory
-if [ -d "$HOME/.bash" ]; then
+if [ -d "$HOME/.bash.d" ]; then
     shopt -s globstar
-    for file in "$HOME/.bash"/**/*.bash; do
+    for file in "$HOME/.bash.d"/**/*.bash; do
         [ -f "$file" ] && source "$file"
     done
 fi
@@ -22,3 +22,6 @@ if [ -d ~/.local/bin ]; then
         *) export PATH="$HOME/.local/bin:$PATH" ;;
     esac
 fi
+
+# opencode
+export PATH=/home/user/.opencode/bin:$PATH

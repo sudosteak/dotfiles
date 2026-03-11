@@ -62,8 +62,8 @@
   "agent": {
     "default_profile": "write",
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-5-codex",
+      "provider": "zed.dev",
+      "model": "gpt-5.2-codex",
     },
     "use_modifier_to_send": true,
     "button": true,

@@ -32,6 +32,8 @@ window-theme = dark
 window-padding-balance = true
 window-padding-color = extend
 
+# Close without confirmation
+confirm-close-surface = false
 # ============================================================================
 # Scrolling
 # ============================================================================
