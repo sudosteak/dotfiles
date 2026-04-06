@@ -25,3 +25,5 @@ fi
 
 # opencode
 export PATH=/home/user/.opencode/bin:$PATH
+
+export PATH=$PATH:/home/user/.spicetify
